@@ -76,7 +76,7 @@ a { color: inherit; text-decoration: none; }
 
 .projects-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 40px; gap: 24px; flex-wrap: wrap; }
 
-/* ── CARD: 2-column grid — texto izquierda, imagen derecha ── */
+/* ── CARD: 2-column grid, alterna imagen izq/der ── */
 .project-card {
   background: var(--bg-card);
   border: 1px solid var(--border);
@@ -84,15 +84,22 @@ a { color: inherit; text-decoration: none; }
   overflow: hidden;
   margin-bottom: 24px;
   display: grid;
-  grid-template-columns: 1fr 1.1fr;
-  min-height: 300px;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
   box-shadow: var(--shadow-sm);
   transition: box-shadow var(--transition);
 }
 .project-card:hover { box-shadow: var(--shadow); }
 
+/* Alternancia: en las pares (2, 4...) la imagen va a la izquierda */
+.project-card.reverse .project-header { order: 2; }
+.project-card.reverse .project-img,
+.project-card.reverse .slider { order: 1; }
+.project-card.reverse .project-img,
+.project-card.reverse .slider { border-left: none; border-right: 1px solid var(--border); }
+
 .project-header {
-  padding: 36px 40px;
+  padding: 40px 44px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -107,40 +114,48 @@ a { color: inherit; text-decoration: none; }
 .project-bullets li { display: flex; gap: 12px; align-items: flex-start; font-size: 14px; color: var(--muted); padding: 9px 0; border-bottom: 1px solid var(--border); line-height: 1.55; }
 .project-bullets li:last-child { border-bottom: none; }
 .project-bullets li::before { content: '→'; color: var(--accent); flex-shrink: 0; margin-top: 2px; font-size: 12px; }
-.expand-btn { display: inline-flex; align-items: center; gap: 8px; background: var(--accent-dim); border: 1px solid var(--accent-bdr); color: var(--accent); font-family: var(--font-display); font-size: 13px; font-weight: 600; cursor: pointer; padding: 7px 16px; border-radius: 100px; margin: 14px 0 18px; transition: var(--transition); }
+.expand-btn { display: inline-flex; align-items: center; gap: 8px; background: var(--accent-dim); border: 1px solid var(--accent-bdr); color: var(--accent); font-family: var(--font-display); font-size: 13px; font-weight: 600; cursor: pointer; padding: 7px 16px; border-radius: 100px; margin-top: 16px; transition: var(--transition); align-self: flex-start; }
 .expand-btn:hover { background: rgba(13,148,136,0.15); border-color: rgba(13,148,136,0.4); }
 .expand-btn .arrow { display: inline-block; transition: transform 0.3s ease; font-size: 11px; }
 .expand-btn.open .arrow { transform: rotate(180deg); }
 
-/* Imagen: ocupa toda la celda derecha */
+/* Imagen: se ve COMPLETA (contain), la card se adapta a su alto */
 .project-img {
   overflow: hidden;
   position: relative;
   border-left: 1px solid var(--border);
   background: var(--bg);
+  padding: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .project-img > img {
   width: 100%;
-  height: 100%;
+  height: auto;
   display: block;
-  object-fit: cover;
-  object-position: top center;
+  object-fit: contain;
+  border-radius: 8px;
 }
 
-/* Slider: llena toda la celda derecha */
-.slider { height: 100%; }
-.slider-track { display: flex; height: 100%; transition: transform 0.4s ease; }
+/* Slider con imagen completa */
+.slider {
+  border-left: 1px solid var(--border);
+  background: var(--bg);
+  padding: 28px;
+}
+.slider-track { display: flex; transition: transform 0.4s ease; align-items: center; }
 .slider-track img {
   min-width: 100%;
   flex-shrink: 0;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top center;
+  height: auto;
+  object-fit: contain;
   display: block;
+  border-radius: 8px;
 }
 
-.project-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+.project-tags { display: none; }
 .tag { background: var(--accent-dim); border: 1px solid var(--accent-bdr); color: var(--accent); font-size: 12px; font-weight: 500; padding: 4px 12px; border-radius: 100px; }
 
 .testimonials { background: var(--white); }
@@ -195,10 +210,13 @@ a { color: inherit; text-decoration: none; }
   .nav-links.open { display: flex; flex-direction: column; position: fixed; inset: 64px 0 0; background: var(--white); padding: 28px 24px; gap: 22px; align-items: flex-start; border-top: 1px solid var(--border); }
   .nav-links.open .nav-cta { display: flex; }
   .hero h1 { font-size: 34px; }
-  /* Cards stack vertically on mobile */
+  /* Cards stack: texto arriba, imagen abajo (siempre, ignora reverse) */
   .project-card { grid-template-columns: 1fr; }
-  .project-img { border-left: none; border-top: 1px solid var(--border); min-height: 240px; }
-  .project-header { padding: 24px 20px 20px; }
+  .project-card.reverse .project-header { order: 1; }
+  .project-card.reverse .project-img,
+  .project-card.reverse .slider { order: 2; border-right: none; }
+  .project-img, .slider { border-left: none; border-top: 1px solid var(--border); padding: 20px; }
+  .project-header { padding: 28px 24px; }
   .contact-grid { grid-template-columns: 1fr; gap: 36px; }
 }
 
