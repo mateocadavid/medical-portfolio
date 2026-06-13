@@ -135,11 +135,11 @@ const translations = {
     'page.index.title':     'MedTech Studio — Specialized Medical Software',
     'page.portfolio.title': 'Portfolio — MedTech Studio',
     'page.contact.title':   'Contact — MedTech Studio',
-    'page.about.title':     'About — MedTech Studio',
+    'page.about.title':     'About Us — MedTech Studio',
 
     'nav.home':      'Home',
     'nav.portfolio': 'Portfolio',
-    'nav.about':     'About',
+    'nav.about':     'About Us',
     'nav.contact':   'Contact',
     'nav.cta':       'Book a Call',
 
