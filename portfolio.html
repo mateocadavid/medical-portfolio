@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portafolio — MedTech Studio</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body data-page="page.portfolio.title">
+
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a class="nav-logo" href="index.html">Med<span>Tech</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" data-i18n="nav.home">Inicio</a></li>
+        <li><a href="portfolio.html" class="active" data-i18n="nav.portfolio">Portafolio</a></li>
+        <li><a href="contact.html" data-i18n="nav.contact">Contacto</a></li>
+        <li class="nav-cta"><a href="contact.html" class="btn btn-primary" data-i18n="nav.cta">Agendar una Llamada</a></li>
+      </ul>
+      <button class="lang-toggle" id="langToggle">EN</button>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="page-hero">
+    <div class="container">
+      <div class="section-label" data-i18n="port.label">Nuestro Trabajo</div>
+      <h1 class="section-title" data-i18n="port.title">Portafolio</h1>
+      <p class="section-sub" data-i18n="port.sub">Proyectos que hemos construido para nuestros clientes.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+
+      <!-- P1: QA Sistema (slider) -->
+      <div class="project-card">
+        <div class="project-header">
+          <div class="project-num" data-i18n="p1.num">PROYECTO 01</div>
+          <h3 data-i18n="p1.title">Sistema Centralizado de QA para Radiodiagnóstico y Medicina Nuclear</h3>
+          <p data-i18n="p1.short">Plataforma centralizada de QA para todas las modalidades de radiodiagnóstico y medicina nuclear.</p>
+          <div class="project-expand" id="exp-1">
+            <ul class="project-bullets" data-i18n-bullets="p1.bullets"></ul>
+          </div>
+          <button class="expand-btn" onclick="toggleExpand('exp-1', this)">
+            <span class="btn-text">Mostrar más</span>
+            <span class="arrow">↓</span>
+          </button>
+          <div class="project-tags" data-i18n-tags="p1.tags"></div>
+        </div>
+        <div class="project-img slider" id="slider-1" data-current="0">
+          <div class="slider-track">
+            <img src="img/p1-a.png" alt="Sistema QA - Vista principal" />
+            <img src="img/p1-b.png" alt="Sistema QA - Análisis de imagen" />
+          </div>
+          <button class="slider-btn slider-prev" onclick="slideMove('slider-1', -1)">&#8249;</button>
+          <button class="slider-btn slider-next" onclick="slideMove('slider-1',  1)">&#8250;</button>
+          <div class="slider-dots">
+            <span class="slider-dot active" data-index="0"></span>
+            <span class="slider-dot" data-index="1"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- P2: DRL -->
+      <div class="project-card">
+        <div class="project-header">
+          <div class="project-num" data-i18n="p2.num">PROYECTO 02</div>
+          <h3 data-i18n="p2.title">Análisis Continuo de Niveles de Referencia de Dosis (DRL)</h3>
+          <p data-i18n="p2.short">Herramienta conectada al PACS institucional para monitoreo continuo de dosis y optimización frente a estándares DRL internacionales.</p>
+          <div class="project-expand" id="exp-2">
+            <ul class="project-bullets" data-i18n-bullets="p2.bullets"></ul>
+          </div>
+          <button class="expand-btn" onclick="toggleExpand('exp-2', this)">
+            <span class="btn-text">Mostrar más</span>
+            <span class="arrow">↓</span>
+          </button>
+          <div class="project-tags" data-i18n-tags="p2.tags"></div>
+        </div>
+        <div class="project-img">
+          <img src="img/p2-a.png" alt="Análisis DRL" />
+        </div>
+      </div>
+
+      <!-- P3: Firmas -->
+      <div class="project-card">
+        <div class="project-header">
+          <div class="project-num" data-i18n="p3.num">PROYECTO 03</div>
+          <h3 data-i18n="p3.title">Sistema de Gestión de Registros y Firmas para Instituciones Radiológicas</h3>
+          <p data-i18n="p3.short">Sistema de registros y firma digital para el control de actividades diarias del personal radiológico, con datos confirmados inmutables.</p>
+          <div class="project-expand" id="exp-3">
+            <ul class="project-bullets" data-i18n-bullets="p3.bullets"></ul>
+          </div>
+          <button class="expand-btn" onclick="toggleExpand('exp-3', this)">
+            <span class="btn-text">Mostrar más</span>
+            <span class="arrow">↓</span>
+          </button>
+          <div class="project-tags" data-i18n-tags="p3.tags"></div>
+        </div>
+        <div class="project-img">
+          <img src="img/p3-a.png" alt="Gestión de Firmas" />
+        </div>
+      </div>
+
+      <!-- P4: Protección radiológica (slider) -->
+      <div class="project-card">
+        <div class="project-header">
+          <div class="project-num" data-i18n="p4.num">PROYECTO 04</div>
+          <h3 data-i18n="p4.title">Plataforma Integral de Gestión de Protección Radiológica</h3>
+          <p data-i18n="p4.short">Plataforma integral para inventario de equipos radiológicos, alertas automáticas de QA y seguimiento dosimétrico del personal expuesto.</p>
+          <div class="project-expand" id="exp-4">
+            <ul class="project-bullets" data-i18n-bullets="p4.bullets"></ul>
+          </div>
+          <button class="expand-btn" onclick="toggleExpand('exp-4', this)">
+            <span class="btn-text">Mostrar más</span>
+            <span class="arrow">↓</span>
+          </button>
+          <div class="project-tags" data-i18n-tags="p4.tags"></div>
+        </div>
+        <div class="project-img slider" id="slider-4" data-current="0">
+          <div class="slider-track">
+            <img src="img/p4-a.png" alt="Protección Radiológica - Equipos" />
+            <img src="img/p4-b.png" alt="Protección Radiológica - Dosimetría" />
+          </div>
+          <button class="slider-btn slider-prev" onclick="slideMove('slider-4', -1)">&#8249;</button>
+          <button class="slider-btn slider-next" onclick="slideMove('slider-4',  1)">&#8250;</button>
+          <div class="slider-dots">
+            <span class="slider-dot active" data-index="0"></span>
+            <span class="slider-dot" data-index="1"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- P5: Calculadora (slider) -->
+      <div class="project-card">
+        <div class="project-header">
+          <div class="project-num" data-i18n="p5.num">PROYECTO 05</div>
+          <h3 data-i18n="p5.title">Calculadora de Dosis Efectiva para Pacientes Pediátricos</h3>
+          <p data-i18n="p5.short">Calculadora especializada de conversión de DLP a dosis efectiva en pacientes pediátricos, con interpolación entre tablas internacionales.</p>
+          <div class="project-expand" id="exp-5">
+            <ul class="project-bullets" data-i18n-bullets="p5.bullets"></ul>
+          </div>
+          <button class="expand-btn" onclick="toggleExpand('exp-5', this)">
+            <span class="btn-text">Mostrar más</span>
+            <span class="arrow">↓</span>
+          </button>
+          <div class="project-tags" data-i18n-tags="p5.tags"></div>
+        </div>
+        <div class="project-img slider" id="slider-5" data-current="0">
+          <div class="slider-track">
+            <img src="img/p5-a.png" alt="Calculadora de dosis - Interfaz" />
+            <img src="img/p5-b.png" alt="Calculadora de dosis - Curva" />
+          </div>
+          <button class="slider-btn slider-prev" onclick="slideMove('slider-5', -1)">&#8249;</button>
+          <button class="slider-btn slider-next" onclick="slideMove('slider-5',  1)">&#8250;</button>
+          <div class="slider-dots">
+            <span class="slider-dot active" data-index="0"></span>
+            <span class="slider-dot" data-index="1"></span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section cta-section">
+    <div class="container">
+      <div class="section-label" data-i18n="cta.label">Trabajemos Juntos</div>
+      <h2 class="section-title" data-i18n="cta.title">¿Listo para Construir tu Próxima Herramienta Médica?</h2>
+      <p class="section-sub" data-i18n="cta.sub">Cuéntanos sobre tu proyecto y te respondemos en menos de 24 horas.</p>
+      <a href="contact.html" class="btn btn-primary" data-i18n="cta.btn">Agendar una Llamada Gratis</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <span class="nav-logo">Med<span style="color:var(--accent)">Tech</span></span>
+        <ul class="footer-links">
+          <li><a href="portfolio.html" data-i18n="nav.portfolio">Portafolio</a></li>
+          <li><a href="contact.html" data-i18n="nav.contact">Contacto</a></li>
+        </ul>
+        <p class="footer-copy" data-i18n="footer.copy">© 2025 MedTech Studio. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/translations.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
