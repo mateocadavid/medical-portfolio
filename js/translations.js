@@ -1,10 +1,10 @@
 const translations = {
 
   es: {
-    'page.index.title':     'MedTech Studio — Software Médico Especializado',
-    'page.portfolio.title': 'Portafolio — MedTech Studio',
-    'page.contact.title':   'Contacto — MedTech Studio',
-    'page.about.title':     'Nosotros — MedTech Studio',
+    'page.index.title':     'Radialab — Software Médico Especializado',
+    'page.portfolio.title': 'Portafolio — Radialab',
+    'page.contact.title':   'Contacto — Radialab',
+    'page.about.title':     'Nosotros — Radialab',
 
     'nav.home':      'Inicio',
     'nav.portfolio': 'Portafolio',
@@ -19,7 +19,7 @@ const translations = {
     'hero.btn2':    'Agendar una Llamada',
 
     'stats.projects.label':     'Proyectos Entregados',
-    'stats.countries.label':    'Países',
+    'stats.countries.label':    'País',
     'stats.experience.label':   'Años de Experiencia',
     'stats.satisfaction.label': 'Satisfacción del Cliente',
 
@@ -78,22 +78,19 @@ const translations = {
 
     'testimonials.label': 'Opiniones de Clientes',
     'testimonials.title': 'Lo Que Dicen Nuestros Clientes',
-    't1.quote': '"Su profundo conocimiento tanto del dominio médico como de la tecnología marcó toda la diferencia. La plataforma superó nuestras expectativas en todos los aspectos."',
-    't1.name':  'Dr. [Nombre del Cliente]',
-    't1.role':  'Director Médico — [Institución]',
-    't2.quote': '"Entrega rápida, comunicación excelente y resultados que mejoraron genuinamente nuestro flujo de trabajo diagnóstico. No dudaríamos en volver a trabajar con ellos."',
-    't2.name':  'Dr. [Nombre del Cliente]',
-    't2.role':  'Jefe de Radiodiagnóstico — [Clínica]',
-    't3.quote': '"El sistema de QA automatizado redujo el tiempo de nuestros controles de calidad a la mitad y eliminó los errores de cálculo manual. Un cambio real en nuestra operación."',
-    't3.name':  '[Nombre del Cliente]',
-    't3.role':  'Oficial de Protección Radiológica — [Centro]',
+    't1.quote': '"El programa de gestión de dosimetría por paciente les permitió a los trabajadores ocupacionalmente expuestos ver su dosimetría de forma visual y rápida desde cualquier lugar, y a mí como oficial gestionarla mucho más rápido."',
+    't1.name':  'Juan Camilo Bedoya Tobón',
+    't1.role':  'Oficial de Protección Radiológica — Clínica de las Américas AUNA',
+    't2.quote': '"El programa de control de QA para los equipos ha reducido significativamente el tiempo de análisis y de generación de reportes en nuestro flujo de trabajo."',
+    't2.name':  'Juan Camilo Bedoya Tobón',
+    't2.role':  'Oficial de Protección Radiológica — Clínica de las Américas AUNA',
 
     'cta.label': 'Trabajemos Juntos',
     'cta.title': '¿Listo para Construir tu Próxima Herramienta Médica?',
     'cta.sub':   'Cuéntanos sobre tu proyecto y te respondemos en menos de 24 horas para agendar una llamada de descubrimiento.',
     'cta.btn':   'Agendar una Llamada Gratis',
 
-    'footer.copy': '© 2025 MedTech Studio. Todos los derechos reservados.',
+    'footer.copy': '© 2025 Radialab. Todos los derechos reservados.',
 
     'port.label': 'Nuestro Trabajo',
     'port.title': 'Portafolio',
@@ -102,7 +99,7 @@ const translations = {
     'about.team.label':  'El Equipo',
     'about.team.title':  'Conoce a los co-fundadores',
     'about.mateo.role':  'Ingeniero de Sistemas — Desarrollo de software y plataformas web',
-    'about.juan.role':   'Ingeniero Físico — Física médica y sistemas de imagen clínica',
+    'about.juan.role':   'Ingeniero Físico — Sistemas de imagen clínica',
 
     'cont.label':       'Escríbenos',
     'cont.title':       'Hablemos de tu Proyecto',
@@ -132,10 +129,10 @@ const translations = {
   },
 
   en: {
-    'page.index.title':     'MedTech Studio — Specialized Medical Software',
-    'page.portfolio.title': 'Portfolio — MedTech Studio',
-    'page.contact.title':   'Contact — MedTech Studio',
-    'page.about.title':     'About Us — MedTech Studio',
+    'page.index.title':     'Radialab — Specialized Medical Software',
+    'page.portfolio.title': 'Portfolio — Radialab',
+    'page.contact.title':   'Contact — Radialab',
+    'page.about.title':     'About Us — Radialab',
 
     'nav.home':      'Home',
     'nav.portfolio': 'Portfolio',
@@ -150,7 +147,7 @@ const translations = {
     'hero.btn2':    'Book a Call',
 
     'stats.projects.label':     'Projects Delivered',
-    'stats.countries.label':    'Countries',
+    'stats.countries.label':    'Country',
     'stats.experience.label':   'Years of Experience',
     'stats.satisfaction.label': 'Client Satisfaction',
 
@@ -209,22 +206,19 @@ const translations = {
 
     'testimonials.label': 'Client Feedback',
     'testimonials.title': 'What Our Clients Say',
-    't1.quote': '"Their deep understanding of both the medical domain and the technology side made all the difference. The platform exceeded our expectations in every way."',
-    't1.name':  'Dr. [Client Name]',
-    't1.role':  'Medical Director — [Institution]',
-    't2.quote': '"Fast delivery, excellent communication, and results that genuinely improved our diagnostic workflow. We would not hesitate to work with them again."',
-    't2.name':  'Dr. [Client Name]',
-    't2.role':  'Head of Radiodiagnostics — [Clinic]',
-    't3.quote': '"The automated QA system cut our quality control time in half and eliminated manual calculation errors. A real operational change for our department."',
-    't3.name':  '[Client Name]',
-    't3.role':  'Radiation Protection Officer — [Center]',
+    't1.quote': '"The per-patient dosimetry management program let our occupationally-exposed workers see their dosimetry visually and quickly from anywhere, and let me as the officer manage it much faster."',
+    't1.name':  'Juan Camilo Bedoya Tobón',
+    't1.role':  'Radiation Protection Officer — Clínica de las Américas AUNA',
+    't2.quote': '"The equipment QA control program has significantly reduced the time spent on analysis and report generation in our workflow."',
+    't2.name':  'Juan Camilo Bedoya Tobón',
+    't2.role':  'Radiation Protection Officer — Clínica de las Américas AUNA',
 
     'cta.label': 'Let us Work Together',
     'cta.title': 'Ready to Build Your Next Medical Tool?',
     'cta.sub':   'Tell us about your project and we will get back to you within 24 hours to schedule a discovery call.',
     'cta.btn':   'Book a Free Call',
 
-    'footer.copy': '© 2025 MedTech Studio. All rights reserved.',
+    'footer.copy': '© 2025 Radialab. All rights reserved.',
 
     'port.label': 'Our Work',
     'port.title': 'Portfolio',
@@ -233,7 +227,7 @@ const translations = {
     'about.team.label':  'The Team',
     'about.team.title':  'Meet the co-founders',
     'about.mateo.role':  'Systems Engineer — Software development and web platforms',
-    'about.juan.role':   'Physics Engineer — Medical physics and clinical imaging systems',
+    'about.juan.role':   'Physics Engineer — Clinical imaging systems',
 
     'cont.label':       'Get in Touch',
     'cont.title':       'Let us Discuss Your Project',
