@@ -209,7 +209,11 @@ a { color: inherit; text-decoration: none; }
   .section { padding: 56px 0; }
 
   /* ── NAV ── */
-  .nav { box-shadow: 0 2px 8px rgba(0,0,0,0.08); } /* separar nav del hero blanco */
+  .nav {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    backdrop-filter: none; /* quitar stacking context que bloquea el panel */
+    background: #ffffff;   /* fondo sólido en vez de rgba */
+  }
   .nav-links { display: none; }
   .nav-cta { display: none; }
   .hamburger { display: flex; }
@@ -222,29 +226,30 @@ a { color: inherit; text-decoration: none; }
     top: 64px;
     left: 0;
     right: 0;
-    bottom: 0;
-    background: var(--white);
-    padding: 32px 24px;
-    gap: 8px;
+    height: calc(100vh - 64px); /* más seguro que bottom:0 en móvil */
+    background: #ffffff;
+    padding: 24px 20px;
+    gap: 0;
     align-items: flex-start;
     border-top: 1px solid var(--border);
-    z-index: 200; /* encima de todo */
+    z-index: 9999;
     overflow-y: auto;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
   }
   .nav-links.open li { width: 100%; }
   .nav-links.open a {
     display: block;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
     color: var(--text);
-    padding: 12px 0;
+    padding: 16px 0;
     border-bottom: 1px solid var(--border);
     width: 100%;
   }
-  .nav-links.open a:last-child { border-bottom: none; }
+  .nav-links.open li:last-child a { border-bottom: none; }
   .nav-links.open .nav-cta {
     display: flex;
-    margin-top: 16px;
+    margin-top: 20px;
     width: 100%;
   }
   .nav-links.open .nav-cta a {
@@ -252,6 +257,7 @@ a { color: inherit; text-decoration: none; }
     font-size: 15px;
     width: 100%;
     justify-content: center;
+    padding: 14px 0;
   }
 
   /* ── HERO ── */
